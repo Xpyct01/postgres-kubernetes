@@ -6,7 +6,7 @@ from .base import Base
 class PostgresProvider:
     """Class for connection with database"""
     def __init__(self):
-        database_url = "postgresql://postgres:postgres@localhost/test"
+        database_url = "postgresql://postgres:postgres@postgres:5432/test"
         self.engine = create_engine(database_url)
         Base.metadata.create_all(self.engine)
         self.db_session = sessionmaker(bind=self.engine)
