@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from base import Base
+from .base import Base
 
 
 class PostgresProvider:
