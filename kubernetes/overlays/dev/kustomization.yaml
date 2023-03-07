@@ -1,0 +1,6 @@
+namespace: dev
+
+resources:
+  - ./namespace.yaml
+  - ../../components/app
+  - ../../components/postgres
