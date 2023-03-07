@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route("/write", methods=['POST'])
 def write_log():
+    """Writes log to database"""
     response = log_repo.create(
         data={"timestamp": datetime.datetime.now(), "type": "test_type", "message": "test_message"}
     )
@@ -19,6 +20,7 @@ def write_log():
 
 @app.route("/read", methods=['GET'])
 def read_log():
+    """Gets log from database using id"""
     request_data = request.get_json()
     log_id = request_data['log_id']
     result = log_repo.read(log_id)
