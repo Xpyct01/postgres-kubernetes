@@ -1,5 +1,5 @@
-from provider import PostgresProvider
-from models import Log
+from .provider import PostgresProvider
+from .models import Log
 
 
 class LogRepository:
